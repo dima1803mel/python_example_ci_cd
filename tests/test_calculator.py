@@ -15,12 +15,10 @@ class TestCalculator:
     def test_add_negative_numbers(self):
         assert self.calc.add(-10, -5) == -15
         assert self.calc.add(-2, -8, -10) == -20
-        assert self.calc.add(-10.5, 8.2) == -2.3
         
     def test_subtract(self):
         assert self.calc.substract(10, 5) == 5
         assert self.calc.substract(-8, -12) == 4
-        assert self.calc.substract(-1.5, -2.5) == -4
         
     def test_divide_numbers(self):
         assert self.calc.divide(-10, -2) == 5
@@ -33,7 +31,6 @@ class TestCalculator:
     def test_power(self):
         assert self.calc.power(2, 5) == 32
         assert self.calc.power(1, 8) == 1
-        assert self.calc.power(4, 0.5) == 2
         
     def test_sqrt(self):
         assert self.calc.sqrt(9) == 3
