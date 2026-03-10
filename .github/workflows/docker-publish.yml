@@ -19,7 +19,7 @@ jobs:
               id: meta
               uses: docker/metadata-action@v4
               with:
-                images: user/app  # Указываем имя образа (наверное)
+                images: user/app  # Указываем имя образа
                 tags: |
                   type=raw,value=latest
                   type=ref,event=branch
