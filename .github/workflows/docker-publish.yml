@@ -24,11 +24,11 @@ jobs:
                   type=raw,value=latest
                   type=ref,event=branch
                   type=sha,format=short
-
-
             - name: Build and push
               uses: docker/build-push-action@v4
               with:
+                context: .
                 push: true
-                tags: ${{ steps.meta.outputs.tags }} # используем тэги
-                labels: ${{ steps.meta.outputs.labels }}
+                tags: |
+                  ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+                  ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
