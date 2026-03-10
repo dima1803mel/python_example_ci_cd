@@ -19,11 +19,8 @@ jobs:
               id: meta
               uses: docker/metadata-action@v4
               with:
-                images: Dima1803Mel/python_example_CI_CD  # Указываем имя образа
-                tags: |
-                  type=raw,value=latest
-                  type=ref,event=branch
-                  type=sha,format=short
+                images: ${{ secrets.DOCKER_USERNAME }}/python_example_CI_CD  # Указываем имя образа
+                
             - name: Build and push
               uses: docker/build-push-action@v4
               with:
