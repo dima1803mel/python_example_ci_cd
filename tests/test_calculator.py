@@ -8,7 +8,7 @@ class TestCalculator:
         self.calc = Calculator()
         
     def test_add_positive_numbers(self):
-        assert self.calc.add(10, 5) == 15
+        assert self.calc.add(10, 5) == 25 # Неправильный тест
         assert self.calc.add(2, 3, 5, 8) == 18
         assert self.calc.add(10.5, 8.2) == 18.7
         
